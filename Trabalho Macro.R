@@ -16,7 +16,7 @@ library('rstudioapi')
 # A primeira escolhe por meio de dialógos
 # Se já souber o caminho a segunda é mais rápida
 # setwd(selectDirectory())
-setwd("/home/pbnnr/Peu/Documentos/UFMG/Econometria I/Trabalho Conjunto/")
+setwd("/home/pbnnr/Peu/Documentos/UFMG/Econometria I/Trabalho Conjunto/deb")
 Turma <- read_excel("turma.xlsx")
 
 # Tratando os Dados # ----
@@ -240,7 +240,7 @@ stargazer(modelo_y,
 # Igual está na tabela da turma
 # Exemplo: Lista <- c('Japão')
 # Exemplo 2: Lista <- c('Nigéria', 'Israel)
-Lista <- c('Singapura','USA','Hong Kong','Taiwan','China')
+Lista <- c('Austrália','USA')
 for(pais in Lista){
 # Regredindo
 assign(paste("modelo_dum_",pais, sep=""), lm(log(Turma$y) ~ log(Turma$s) + log(Turma$n+g+d) 
